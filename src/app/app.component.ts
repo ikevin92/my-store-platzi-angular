@@ -14,6 +14,12 @@ export class AppComponent {
   img: string = 'https://www.w3schools.com/howto/img_avatar.png';
   btnDisabled: boolean = true;
 
+  register = {
+    name: '',
+    email: '',
+    password: ''
+  };
+
   person = {
     name: 'Kevin',
     age: 29,
@@ -88,5 +94,9 @@ export class AppComponent {
 
   deleteName(index: number) {
     this.names.splice(index, 1);
+  }
+
+  onRegister() {
+    console.log('register', this.register);
   }
 }
